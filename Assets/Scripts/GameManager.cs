@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     public int contadorJugada;
     public int playsCont;
-    public int playsContTontal;
+    public int playsContTotal;
 
     [SerializeField] public TextMeshProUGUI tempo;
     [SerializeField] public TextMeshProUGUI nJugadas;
@@ -70,6 +70,10 @@ public class GameManager : MonoBehaviour
     {
         if (contCardsRevel >= cards.Count / 2)
         {
+            playsContTotal = playsCont;
+            tiempoActualTotal = tiempoActual;
+            tempoTotal.text = "Tiempo total: " + tiempoActualTotal.ToString("f2");
+            nJugadasTotal.text = "Turnos totales: " + playsContTotal.ToString();
             victoryPanel.SetActive(true);
         }
     }
