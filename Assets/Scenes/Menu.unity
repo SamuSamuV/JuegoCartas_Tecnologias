@@ -159,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -216}
-  m_SizeDelta: {x: 592.47, y: 206.0629}
+  m_AnchoredPosition: {x: 300, y: 0}
+  m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &29889957
 MonoBehaviour:
@@ -238,9 +238,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6a9fd1c3eae5c9b4aafbcb960732df31, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb0a5e71000e5a648b351bc2f007b820, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1011,7 +1011,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 893878194}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: eassyMode
+        m_MethodName: LoadEassyMode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1216,8 +1216,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 49}
-  m_SizeDelta: {x: 592.47, y: 206.0629}
+  m_AnchoredPosition: {x: -300, y: 0}
+  m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1073119728
 MonoBehaviour:
@@ -1295,9 +1295,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bd31cb1ef9c76094aa11d82aab559014, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac9cdc2f833362046a5b3834e0699d47, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1680,7 +1680,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 893878194}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: difficultMode
+        m_MethodName: LoadDifficultMode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

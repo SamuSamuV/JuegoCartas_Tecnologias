@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public TextMeshProUGUI nJugadas;
     [SerializeField] public TextMeshProUGUI tempoTotal;
     [SerializeField] public TextMeshProUGUI nJugadasTotal;
+
     [SerializeField] public int contCardsRevel;
 
     public float tiempoActual;

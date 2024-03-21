@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 4e8134b15c9e3d94c98f4aa1d26b1e80
   - enabled: 1
-    path: Assets/Scenes/Juego.unity
+    path: Assets/Scenes/JuegoEasy.unity
+    guid: 863d732456d6c3b4ead49cd3aba86f1d
+  - enabled: 1
+    path: Assets/Scenes/JuegoDifficult.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Estadisticas.unity
+    guid: 01e8a0fb30e96c9459b3e8dea23acff2
   m_configObjects: {}

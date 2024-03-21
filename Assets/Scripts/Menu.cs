@@ -17,14 +17,23 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
-    public void eassyMode()
+    public void LoadEassyMode()
     {
         SceneManager.LoadScene(1);
     }
 
-    public void difficultMode()
+    public void LoadDifficultMode()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
+    }
 
+    public void LoadEstadistics()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+    public void LoadHome()
+    {
+        SceneManager.LoadScene(0);
     }
 }

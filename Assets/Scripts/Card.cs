@@ -97,7 +97,7 @@ public class Card : MonoBehaviour
 
     IEnumerator WaitForWin() //Para evitar que nada mas clickar en la última carta salte el VictoryPanel
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.5f);
 
         gm.GetComponent<GameManager>().FindOutWin();
     }
