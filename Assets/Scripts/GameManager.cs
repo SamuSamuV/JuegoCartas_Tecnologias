@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
+    public Scene currentScene;
+
     public List<Transform> emptyPositions;
     public List<GameObject> cards;
 
@@ -32,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        currentScene = SceneManager.GetActiveScene();
+
         bloquearCartas = false;
         contCardsRevel = 0;
         List<Transform> tempPositions = new List<Transform>(emptyPositions);
@@ -45,6 +51,16 @@ public class GameManager : MonoBehaviour
         }
 
         CambiarTemporizador(true);
+
+        if(currentScene.name == "JuegoEasy")
+        {
+            Data.instance.easyModeWasPlayed = true;
+        }
+
+        else if (currentScene.name == "JuegoDifficult")
+        {
+            Data.instance.difficultModeWasPlayed = true;
+        }
     }
 
     void Update()
@@ -77,10 +93,16 @@ public class GameManager : MonoBehaviour
             nJugadasTotal.text = "Turnos totales: " + playsContTotal.ToString();
             victoryPanel.SetActive(true);
 
-            if(tiempoActualTotal < Data.instance.tiempoActualTotalRecord)
+            if(tiempoActualTotal < Data.instance.tiempoActualTotalRecordEasy && currentScene.name == "JuegoEasy")
             {
-                Data.instance.tiempoActualTotalRecord = tiempoActualTotal;
-                Data.instance.playsContTotalRecord = playsContTotal;
+                Data.instance.tiempoActualTotalRecordEasy = tiempoActualTotal;
+                Data.instance.playsContTotalRecordEasy = playsContTotal;
+            }
+
+            else if (tiempoActualTotal < Data.instance.tiempoActualTotalRecordDifficult && currentScene.name == "JuegoDifficult")
+            {
+                Data.instance.tiempoActualTotalRecordDifficult = tiempoActualTotal;
+                Data.instance.playsContTotalRecordDifficult = playsContTotal;
             }
         }
     }
