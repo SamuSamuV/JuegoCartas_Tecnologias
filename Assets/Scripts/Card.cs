@@ -62,9 +62,10 @@ public class Card : MonoBehaviour
                         if (gm.GetComponent<GameManager>().contCardsRevel >= gm.GetComponent<GameManager>().cards.Count / 2)
                         {
                             gm.GetComponent<GameManager>().DesactivarTemporizador();
+                            StartCoroutine(WaitForWin());
                         }
 
-                        StartCoroutine(WaitForWin());
+                        
                     }
 
                     else

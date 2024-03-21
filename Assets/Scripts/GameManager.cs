@@ -75,6 +75,12 @@ public class GameManager : MonoBehaviour
             tempoTotal.text = "Tiempo total: " + tiempoActualTotal.ToString("f2");
             nJugadasTotal.text = "Turnos totales: " + playsContTotal.ToString();
             victoryPanel.SetActive(true);
+
+            if(tiempoActualTotal < Data.instance.tiempoActualTotalRecord)
+            {
+                Data.instance.tiempoActualTotalRecord = tiempoActualTotal;
+                Data.instance.playsContTotalRecord = playsContTotal;
+            }
         }
     }
 
