@@ -64,8 +64,6 @@ public class Card : MonoBehaviour
                             gm.GetComponent<GameManager>().DesactivarTemporizador();
                             StartCoroutine(WaitForWin());
                         }
-
-                        
                     }
 
                     else
