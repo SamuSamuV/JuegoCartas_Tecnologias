@@ -3,7 +3,11 @@ guid: d0deb3b3089f16f44ba90210f797bec9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - gm: {instanceID: 0}
+  - cartaHija: {instanceID: 0}
+  - carta2Provisional: {instanceID: 0}
+  - passCard: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

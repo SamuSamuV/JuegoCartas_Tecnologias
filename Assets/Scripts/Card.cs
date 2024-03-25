@@ -11,12 +11,19 @@ public class Card : MonoBehaviour
 
     [SerializeField] public bool blockCardDone = false;
 
+    public AudioClip passCard;
+    private AudioSource audioSource;
+
     void Start()
     {
         blockCardDone = false;
 
         gm = GameObject.FindGameObjectWithTag("gm");
         cartaHija = gameObject.transform.GetChild(0).gameObject;
+
+        audioSource = GetComponent<AudioSource>();
+
+        audioSource.clip = passCard;
     }
 
     void Update()
@@ -35,6 +42,7 @@ public class Card : MonoBehaviour
             if (gm.GetComponent<GameManager>().contadorJugada == 1)
             {
                 gm.GetComponent<GameManager>().cardSelected1 = cartaHija;
+                audioSource.Play();
             }
 
             else if (gm.GetComponent<GameManager>().contadorJugada == 2)
@@ -52,6 +60,7 @@ public class Card : MonoBehaviour
                     if (gm.GetComponent<GameManager>().cardSelected1.name == gm.GetComponent<GameManager>().cardSelected2.name)
                     {
                         Debug.Log("Coinciden");
+                        audioSource.Play();
                         gm.GetComponent<GameManager>().BlockCard();
                         gm.GetComponent<GameManager>().cardSelected1 = null;
                         gm.GetComponent<GameManager>().cardSelected2 = null;
@@ -69,6 +78,7 @@ public class Card : MonoBehaviour
                     else
                     {
                         Debug.Log("No coinciden");
+                        audioSource.Play();
                         StartCoroutine(ShowFirstCardAgain());
 
                         gm.GetComponent<GameManager>().playsCont++;
