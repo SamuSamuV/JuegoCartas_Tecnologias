@@ -1483,7 +1483,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Record Modo F\xE1cil"
+  m_text: "Record Modo Dif\xEDcil"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e3a080a25dd571428a4aaaf98f13327, type: 2}
   m_sharedMaterial: {fileID: 8983118573120962047, guid: 2e3a080a25dd571428a4aaaf98f13327, type: 2}
